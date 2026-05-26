@@ -2,6 +2,47 @@
 
 A Flutter mobile application for Android and iOS that scrapes company websites and emails from DuckDuckGo search results. This app is a mobile version of the Python-based desktop scraper, optimized for email marketing purposes.
 
+## 🚀 QUICK START - Build APK Now
+
+### Option 1: Cloud Build (Recommended - No Android SDK Required)
+
+1. **Setup GitHub Repository:**
+   ```powershell
+   cd d:\AI\company_email_scraper
+   .\setup_github_repo.ps1
+   ```
+   Follow the prompts to create a new GitHub repository
+
+2. **Trigger Cloud Build:**
+   - Go to your repository on GitHub
+   - Click "Actions" tab
+   - Click "Build Android APK" workflow
+   - Click "Run workflow" button
+   - Wait 5-10 minutes
+   - Download APK from Artifacts section
+
+### Option 2: Local Build (Requires Android SDK)
+
+1. **Install Android SDK Automatically:**
+   ```powershell
+   # Right-click PowerShell → "Run as Administrator"
+   cd d:\AI\company_email_scraper
+   .\setup_android.ps1
+   ```
+   Close PowerShell after completion, then open new window
+
+2. **Build APK:**
+   ```powershell
+   cd d:\AI\company_email_scraper
+   .\build_apk.bat
+   ```
+
+3. **Install on Device:**
+   - APK location: `build\app\outputs\flutter-apk\app-release.apk`
+   - Transfer to Android device and install, or use `flutter install`
+
+**📖 Detailed Guide:** See [BUILD_GUIDE.md](BUILD_GUIDE.md) for complete troubleshooting and alternative methods.
+
 ## Features
 
 - **Company Search**: Search for company websites using DuckDuckGo HTML search engine
