@@ -1,0 +1,45 @@
+name: company_email_scraper
+description: A Flutter app for scraping company websites and emails from DuckDuckGo search results.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # HTTP requests
+  http: ^1.1.0
+  
+  # HTML parsing
+  html: ^0.15.4
+  
+  # Local database
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  
+  # File handling
+  path_provider: ^2.1.1
+  share_plus: ^7.2.1
+  
+  # State management
+  provider: ^6.1.1
+  
+  # UI components
+  cupertino_icons: ^1.0.6
+  
+  # CSV export
+  csv: ^5.1.1
+  
+  # URL parsing
+  url_launcher: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
