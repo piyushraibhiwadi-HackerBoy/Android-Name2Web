@@ -14,12 +14,19 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Setup Flutter
-      uses: subosito/flutter-action@v2.16.0
+    - name: Setup Java
+      uses: actions/setup-java@v4
       with:
-        flutter-version: '3.44.0'
-        channel: 'stable'
-        cache: true
+        distribution: 'temurin'
+        java-version: '17'
+    
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+    
+    - name: Download Flutter
+      run: |
+        git clone https://github.com/flutter/flutter.git -b stable --depth 1
+        echo "$PWD/flutter/bin" >> $GITHUB_PATH
     
     - name: Install dependencies
       run: flutter pub get
